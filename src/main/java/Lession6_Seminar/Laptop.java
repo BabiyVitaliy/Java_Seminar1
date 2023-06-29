@@ -9,7 +9,7 @@ public class Laptop {
     private boolean status;
 
     public Laptop(String brand, String name, String model, String color,
-                  String diskType, String cpuBrand, String gpuBrand, /*String condition,*/
+                  String diskType, String cpuBrand, String gpuBrand,
                   int id, int year, int ram, int capacity, double screenSize) {
         this.brand = brand;
         this.name = name;
@@ -18,7 +18,6 @@ public class Laptop {
         this.diskType = diskType;
         this.cpuBrand = cpuBrand;
         this.gpuBrand = gpuBrand;
-        //this.condition = condition;
         this.id = id;
         this.year = year;
         this.ram = ram;
@@ -145,10 +144,7 @@ public class Laptop {
 
     private void setPrice() {
         int current_year = LocalDate.now().getYear();
-      /*  price = condition.equals("Восстановленный") ? basePrice * 0.7
-                : condition.equals("Подержанный") ? basePrice * 0.5
-                : condition.equals("Сломанный") ? basePrice * 0.3
-                : basePrice;*/
+
         price = year == current_year ? price
                 : year == current_year - 1 ? price * 0.85
                 : year == current_year - 2 ? price * 0.75
