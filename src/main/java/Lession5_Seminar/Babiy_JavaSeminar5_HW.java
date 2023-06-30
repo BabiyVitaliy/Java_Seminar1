@@ -22,7 +22,7 @@
  */
 
 
-package Lession4_Seminar;
+package Lession5_Seminar;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -31,7 +31,7 @@ import static java.lang.System.in;
 public class Babiy_JavaSeminar5_HW {
 
     public static void main(String[] args) {
-        System.out.println("Введите одну из следующих команд цифрой\n" +
+        System.out.println("Введите одну из следующих команд \n" +
                 "ADD - добавить фамилию и номер \n" +
                 "GET - получить список всех номеров по фамилии\n" +
                 "REMOVE - удалить все номера по фамилии\n" +
@@ -44,15 +44,15 @@ public class Babiy_JavaSeminar5_HW {
             String input = scanner.nextLine();
             String[] command = input.split(" ");
             System.out.println(command);
-            if ("1".equals(command[0])) {
+            if ("ADD".equals(command[0])) {
                 addData(phoneBook, input);
-            } else if ("2".equals(command[0])) {
+            } else if ("GET".equals(command[0])) {
                 getBySurname(phoneBook, command);
-            } else if ("3".equals(command[0])) {
+            } else if ("REMOVE".equals(command[0])) {
                 removeBySurname(phoneBook, command);
-            } else if ("4".equals(command[0])) {
+            } else if ("LIST".equals(command[0])) {
                 allData(phoneBook);
-            } else if ("5".equals(command[0])) {
+            } else if ("EXIT".equals(command[0])) {
                 System.exit(0);
                 break;
             } else {
